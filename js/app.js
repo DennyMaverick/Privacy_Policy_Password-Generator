@@ -1,0 +1,180 @@
+//* =========== Объект с переводом страницы ==============
+
+const langs = {
+  title: {
+    ru: "Политика конфиденциальности, Password Generator – Генератор паролей",
+    en: "Privacy Policy, Password Generator"
+  },
+  "privacy-policy-title": {
+    ru: "Политика конфиденциальности",
+    en: "Privacy Policy",
+  },
+  "privacy-policy-description": {
+    ru: "Настоящая Политика конфиденциальности распространяется на веб-версию проекта «Password Generator – Генератор паролей», размещённую на сайте https://password-generator.dennymaverick.ru, и соответствующее мобильное приложение Android, распространяемое через RuStore.",
+    en: "This Privacy Policy applies to the web version of the project “Password Generator”, hosted at https://password-generator.dennymaverick.ru, and the corresponding Android mobile application distributed through RuStore.",
+  },
+  "privacy-policy-first-title": {
+    ru: "1. Сбор и использование данных",
+    en: "1. Data Collection and Use",
+  },
+  "privacy-policy-second-title": {
+    ru: "2. Генерация и хранение паролей",
+    en: "2. Password Generation and Storage",
+  },
+  "privacy-policy-third-title": {
+    ru: "3. Локальное хранение настроек",
+    en: "3. Local Storage of Settings",
+  },
+  "privacy-policy-fourth-title": {
+    ru: "4. Файлы cookie и сторонние сервисы",
+    en: "4. Cookies and Third-Party Services",
+  },
+  "privacy-policy-fifth-title": {
+    ru: "5. Хостинг и техническая информация",
+    en: "5. Hosting and Technical Information",
+  },
+  "privacy-policy-sixth-title": {
+    ru: "6. Контактная информация",
+    en: "6. Contact Information",
+  },
+
+  "privacy-policy-data-desc-first": {
+    ru: "Приложение «Password Generator – Генератор паролей» самостоятельно не запрашивает, не собирает, не хранит и не передаёт персональные данные пользователей.",
+    en: "The «Password Generator» application does not independently request, collect, store, or transmit users' personal data.",
+  },
+  "privacy-policy-data-desc-second": {
+    ru: "Генерация паролей осуществляется непосредственно на устройстве пользователя. Созданные пароли не отправляются на внешние серверы и не передаются владельцу проекта. Приложение не требует подключения к интернету и не использует внешние сетевые сервисы для выполнения основных функций.",
+    en: "Password generation is performed directly on the user's device. Generated passwords are not sent to external servers or transmitted to the project owner. The application does not require an internet connection and does not use external network services to perform its core functions.",
+  },
+  "privacy-policy-data-desc-third": {
+    ru: "Все операции по созданию паролей выполняются локально на устройстве пользователя. Сгенерированные пароли предназначены для использования пользователем по собственному усмотрению. Приложение не сохраняет историю созданных паролей и не передаёт их третьим лицам. Владелец проекта не имеет доступа к сгенерированным паролям.",
+    en: "All password generation operations are performed locally on the user's device. Generated passwords are intended for use at the user's own discretion. The application does not store a history of generated passwords or share them with third parties. The project owner does not have access to generated passwords.",
+  },
+  "privacy-policy-data-desc-fourth": {
+    ru: "Для обеспечения корректной работы и удобства использования веб-версии и мобильного приложения может использоваться механизм локального хранения данных (localStorage). В localStorage сохраняются исключительно пользовательские настройки интерфейса:",
+    en: "To ensure the proper functioning and convenience of the web version and mobile application, a local data storage mechanism (localStorage) may be used. Only the following user interface settings are stored in localStorage:",
+  },
+  "choosen-lang": {
+    ru: "выбранный язык;",
+    en: "selected language;",
+  },
+  "choosen-theme": {
+    ru: "выбранная цветовая тема.",
+    en: "selected color theme.",
+  },
+  "privacy-policy-data-desc-fifth": {
+    ru: "Указанные настройки хранятся локально на устройстве пользователя и используются исключительно для сохранения выбранных параметров интерфейса. Эти сведения не передаются владельцу проекта и не используются для идентификации пользователей.",
+    en: "These settings are stored locally on the user's device and are used exclusively to preserve the selected interface preferences. This information is not transmitted to the project owner and is not used to identify users.",
+  },
+  "privacy-policy-data-desc-sixth": {
+    ru: "На момент публикации настоящей редакции Политики в проекте не используются сторонние сервисы веб-аналитики и рекламные сети.",
+    en: "As of the publication date of this version of the Privacy Policy, the project does not use third-party web analytics services or advertising networks.",
+  },
+  "privacy-policy-data-desc-seventh": {
+    ru: "В случае подключения таких сервисов, включая Яндекс.Метрику и Рекламную сеть Яндекса (РСЯ), настоящая Политика будет дополнена сведениями о целях использования соответствующих сервисов, категориях обрабатываемых данных и применяемых технологиях, включая файлы cookie.",
+    en: "If such services are connected, including Yandex.Metrica and the Yandex Advertising Network (YAN), this Privacy Policy will be supplemented with information about the purposes of using the relevant services, the categories of data processed, and the technologies used, including cookies.",
+  },
+  "privacy-policy-data-desc-eighth": {
+    ru: "Веб-версия проекта размещена на платформе GitHub Pages, предоставляемой компанией GitHub, Inc. При посещении веб-версии хостинг может автоматически обрабатывать техническую информацию, включая IP-адрес, дату и время обращения, запрашиваемую страницу, тип браузера и операционную систему пользователя. Такая обработка осуществляется инфраструктурой GitHub в целях обеспечения работоспособности, безопасности и защиты сервиса.",
+    en: "The web version of the project is hosted on GitHub Pages, a platform provided by GitHub, Inc. When users visit the web version, the hosting provider may automatically process technical information, including IP addresses, dates and times of access, requested pages, browser types, and operating systems. Such processing is carried out by GitHub's infrastructure to ensure the functionality, security, and protection of the service.",
+  },
+  "privacy-policy-data-git-first": {
+    ru: "Владелец проекта не имеет прямого доступа к внутренним техническим журналам GitHub. Дополнительная информация об обработке данных доступна в ",
+    en: "The project owner does not have direct access to GitHub's internal technical logs. Additional information about data processing is available in ",
+  },
+  "privacy-policy-data-git-second": {
+    ru: "Политике конфиденциальности GitHub",
+    en: "the GitHub Privacy Statement",
+  },
+  "date-of-update": {
+    ru: "Дата последнего обновления: 12 ноября 2026 года.",
+    en: "Last updated: November 12, 2026.",
+  },
+}
+
+const repeatElems = {
+  "logo-title": {
+    ru: "Password Generator – Генератор паролей",
+    en: "Password Generator",
+  },
+}
+
+const langListItems = document.querySelectorAll(".lang-tool__item")
+// Массив всех доступных языков
+const allLangs = ["ru", "en"]
+
+langListItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    // получение hash из строки браузера - #ru или #en
+
+    // получение значения атрибута data-lang (ru или en)
+    let lang = this.dataset.lang
+
+    // Сохраняем выбранный язык
+    localStorage.setItem("lang", lang)
+
+    // добавление в строку браузера #ru или #en
+    location.href = window.location.pathname + "#" + lang
+
+    // перезагрузка страницы
+    location.reload()
+  })
+})
+
+function changeLang() {
+  // Получаем язык из URL
+  let hash = window.location.hash.substring(1)
+
+  // Получаем язык из localStorage
+  const savedLang = localStorage.getItem("lang")
+
+  // Если сохранённого языка нет — устанавливаем английский.
+  if (allLangs.includes(hash)) {
+    // Используем язык из URL
+  } else if (allLangs.includes(savedLang)) {
+    hash = savedLang
+  } else {
+    hash = "ru"
+  }
+
+  // Сохраняем актуальный язык
+  localStorage.setItem("lang", hash)
+
+  // Синхронизируем URL
+  if (window.location.hash !== "#" + hash) {
+    history.replaceState(null, "", window.location.pathname + "#" + hash)
+  }
+
+  const langToolRuEl = document.querySelector('[data-lang="ru"]')
+  const langToolEnEl = document.querySelector('[data-lang="en"]')
+  // получение hash из строки браузера - #ru или #en
+
+  if (hash === "ru") {
+    langToolRuEl.classList.add("lang-tool--active")
+    langToolEnEl.classList.remove("lang-tool--active")
+  } else {
+    langToolEnEl.classList.add("lang-tool--active")
+    langToolRuEl.classList.remove("lang-tool--active")
+  }
+
+  // перебор массива langs
+  for (let key in langs) {
+    // получение элементов в html, которые нужно перевести
+    let elem = document.querySelector(".lang-" + key)
+    // если элемент существует и язык для элемента прописан в объекте с переводом языков, то заменить содержание контента в элементе на тот контент, который взят из массива langs
+    if (elem && langs[key][hash]) {
+      elem.innerHTML = langs[key][hash]
+    }
+  }
+
+  for (let key in repeatElems) {
+    let elems = document.querySelectorAll(".lang-" + key)
+    elems.forEach(function (elem) {
+      if (elem && repeatElems[key][hash]) {
+        elem.innerHTML = repeatElems[key][hash]
+      }
+    })
+  }
+}
+// запуск функции changeLang()
+changeLang()
