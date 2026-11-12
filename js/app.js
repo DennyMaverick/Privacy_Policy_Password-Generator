@@ -3,15 +3,15 @@
 const langs = {
   title: {
     ru: "Политика конфиденциальности, Password Generator – Генератор паролей",
-    en: "Privacy Policy, Password Generator"
+    en: "Privacy Policy, Password Generator",
   },
   "privacy-policy-title": {
     ru: "Политика конфиденциальности",
     en: "Privacy Policy",
   },
   "privacy-policy-description": {
-    ru: "Настоящая Политика конфиденциальности распространяется на веб-версию проекта «Password Generator – Генератор паролей», размещённую на сайте https://password-generator.dennymaverick.ru, и соответствующее мобильное приложение Android, распространяемое через RuStore.",
-    en: "This Privacy Policy applies to the web version of the project “Password Generator”, hosted at https://password-generator.dennymaverick.ru, and the corresponding Android mobile application distributed through RuStore.",
+    ru: "Настоящая Политика конфиденциальности распространяется на веб-версию проекта «Password Generator – Генератор паролей», размещённую на сайте <a target='_blank' href='https://password-generator.dennymaverick.ru'> https://password-generator.dennymaverick.ru</a>, и соответствующее мобильное приложение Android, распространяемое через RuStore.",
+    en: "This Privacy Policy applies to the web version of the project “Password Generator”, hosted at <a target='_blank' href='https://password-generator.dennymaverick.ru'> https://password-generator.dennymaverick.ru</a>, and the corresponding Android mobile application distributed through RuStore.",
   },
   "privacy-policy-first-title": {
     ru: "1. Сбор и использование данных",
