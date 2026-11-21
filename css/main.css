@@ -545,7 +545,19 @@ p {
   }
 }
 
+@media (max-width: 992px) {
+  .header {
+    display: none;
+  }
+  .privacy-policy-wrapper {
+    margin-top: 70px;
+  }
+}
+
 @media (max-width: 768px) {
+  .privacy-policy-wrapper {
+    margin-top: 35px;
+  }
   h1 {
     font-size: 16px;
   }
@@ -554,9 +566,6 @@ p {
   }
   .container {
     padding: 10px;
-  }
-  .privacy-policy-wrapper {
-    margin-top: 100px;
   }
   .logo-title {
     font-size: 11px;
